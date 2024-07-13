@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { Home } from "../pages/home/home.component";
 import SignInSide from "../pages/sign-in/sign-in.component";
 
 import { Mail } from "../pages/mail/mail.component";
@@ -9,6 +8,7 @@ import App from "../App";
 import { Trainers } from "../pages/trainers/trainers.component";
 import { AccountStatement } from "../pages/account-statement/account-statement.component";
 import { Devices } from "../pages/devices/devices.component";
+
 export const router = createBrowserRouter([
   {
     path: "",
@@ -19,10 +19,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <SignInSide />,
       },
-      {
-        path: "/home",
-        element: <Home />,
-      },
+      // {
+      //   path: "/home",
+      //   element: <Home />,
+      // },
       {
         path: "/dashboard",
         element: <Dashboard />,
@@ -43,6 +43,10 @@ export const router = createBrowserRouter([
         path: "/devices",
         element: <Devices />,
       },
+      // {
+      //   path: "/edit-trainer",
+      //   element: <EditTrainer />,
+      // },
     ],
   },
 ]);

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -22,6 +22,9 @@ import MailIcon from "@mui/icons-material/Mail";
 
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { MainListItems } from "../listitem/listitem.component";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { useThemeContext } from "../../context/themeprovider/themeprovider";
+import NightlightIcon from "@mui/icons-material/Nightlight";
 const drawerWidth = 240;
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -68,112 +71,122 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 // TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 
 export default function SideBar() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+  const { toggleColorMode, theme } = useThemeContext();
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar
-          position="absolute"
-          open={open}
-          style={{ backgroundColor: "black" }}
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar
+        position="absolute"
+        open={open}
+        style={{ backgroundColor: "black" }}
+      >
+        <Toolbar
+          sx={{
+            pr: "24px", // keep right padding when drawer closed
+          }}
         >
-          <Toolbar
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            onClick={toggleDrawer}
             sx={{
-              pr: "24px", // keep right padding when drawer closed
+              marginRight: "36px",
+              ...(open && { display: "none" }),
             }}
           >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            component="h1"
+            variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flexGrow: 1 }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <img src={logo} alt="" />
+            </Avatar>
+          </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
-              edge="start"
+              size="large"
+              aria-label="show 4 new mails"
               color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: "36px",
-                ...(open && { display: "none" }),
-              }}
             >
-              <MenuIcon />
+              <Badge badgeContent={4} color="error">
+                <MailIcon />
+              </Badge>
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
               color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
             >
-              <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-                <img src={logo} alt="" />
-              </Avatar>
-            </Typography>
-            <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <Badge badgeContent={4} color="error">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="error">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                size="large"
-                edge="end"
-                aria-label="account of current user"
-                aria-haspopup="true"
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </Box>
-            <Box sx={{ display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="show more"
-                aria-haspopup="true"
-                color="inherit"
-              >
-                <MoreIcon />
-              </IconButton>
-            </Box>
-          </Toolbar>
-        </AppBar>
-        <Drawer variant="permanent" open={open} style={{ height: "100vh" }}>
-          <Toolbar
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              px: [1],
-            }}
-          >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
+              <Badge badgeContent={17} color="error">
+                <NotificationsIcon />
+              </Badge>
             </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav">
-            <MainListItems />
-          </List>
-        </Drawer>
-      </Box>
-    </ThemeProvider>
+
+            <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+            <IconButton
+              sx={{ ml: 1 }}
+              color="inherit"
+              onClick={toggleColorMode}
+            >
+              {theme.palette.mode === "dark" ? (
+                <NightlightIcon />
+              ) : (
+                <Brightness7Icon />
+              )}
+            </IconButton>
+          </Box>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="show more"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <MoreIcon />
+            </IconButton>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Drawer variant="permanent" open={open} style={{ height: "100vh" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            px: [1],
+          }}
+        >
+          <IconButton onClick={toggleDrawer}>
+            <ChevronLeftIcon />
+          </IconButton>
+        </Toolbar>
+        <Divider />
+        <List component="nav">
+          <MainListItems />
+        </List>
+      </Drawer>
+    </Box>
   );
 }
