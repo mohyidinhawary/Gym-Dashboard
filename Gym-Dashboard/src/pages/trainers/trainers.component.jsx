@@ -7,48 +7,74 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 
 import { IconButton } from "@mui/material";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { PersonAdd } from "@mui/icons-material";
+import { TextField } from "@mui/material";
 
 const handleviewClick = (id) => {
   alert(`view row with id: ${id}`);
 };
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 150 },
-  { field: "lastName", headerName: "Last name", width: 150 },
+  { field: "firstName", headerName: "First name", width: 100 },
+  { field: "lastName", headerName: "Last name", width: 100 },
   {
     field: "address",
     headerName: "address",
 
-    width: 150,
+    width: 100,
   },
   {
     field: "email",
     headerName: "email",
     // description: "This column has a value getter and is not sortable.",
     sortable: false,
-    width: 150,
+    width: 100,
     // valueGetter: (value, row) => `${row.firstName || ""} ${row.lastName || ""}`,
   },
   {
     field: "phone",
     headerName: "phone",
 
-    width: 150,
+    width: 100,
+  },
+  {
+    field: "gender",
+    headerName: "gender",
+
+    width: 100,
+  },
+  {
+    field: "experince",
+    headerName: "experince",
+
+    width: 100,
+  },
+  {
+    field: "contract type",
+    headerName: "contract type",
+
+    width: 100,
+  },
+  {
+    field: "salary",
+    headerName: "salary",
+
+    width: 100,
   },
   {
     field: "actions",
     headerName: "actions",
-    width: 150,
+    width: 100,
     renderCell: (params) => (
       <>
-        <IconButton>
+        <IconButton component={Link} to="/edit-trainer">
           <EditIcon />
         </IconButton>
 
-        <IconButton onClick={() => handleviewClick(params.row.id)}>
+        {/* <IconButton onClick={() => handleviewClick(params.row.id)}>
           <RemoveRedEyeIcon />
-        </IconButton>
+        </IconButton> */}
 
         <IconButton onClick={() => handleviewClick(params.row.id)}>
           <PersonRemoveIcon />
@@ -66,6 +92,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 2,
@@ -74,6 +104,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 3,
@@ -82,6 +116,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 4,
@@ -90,6 +128,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 5,
@@ -98,6 +140,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 6,
@@ -106,6 +152,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 7,
@@ -114,6 +164,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 8,
@@ -122,6 +176,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
   {
     id: 9,
@@ -130,6 +188,10 @@ const rows = [
     address: "midan",
     email: "user@example",
     phone: 949928511,
+    gender:"male",
+    experince:"2 year",
+    contract_type:"yearly",
+    salary:"100$"
   },
 ];
 
@@ -151,6 +213,19 @@ export function Trainers() {
             paddingTop: 10,
           }}
         >
+          <IconButton component={Link} to="/add-trainer">
+            <PersonAdd />
+          </IconButton>
+          <TextField
+  hiddenLabel
+  id="filled-hidden-label-small"
+  defaultValue=""
+  variant="outlined"
+  size="small"
+  style={{marginLeft:"850px"}}
+ margin="dense"
+ label="serach"
+/>
           <div style={{ height: 600, width: "100%" }}>
             <DataGrid
               rows={rows}

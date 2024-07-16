@@ -7,8 +7,9 @@ import Dashboard from "../pages/dashboard/dashboard.component";
 import App from "../App";
 import { Trainers } from "../pages/trainers/trainers.component";
 import { AccountStatement } from "../pages/account-statement/account-statement.component";
-import { Devices } from "../pages/devices/devices.component";
-
+import { Settings } from "../pages/settings/settings.component";
+import { EditTrainerInfo } from "../pages/edit-trainer-info/edittrainerinfo.component";
+import { AddTrainer } from "../pages/add-trainer/addtrainer.component";
 export const router = createBrowserRouter([
   {
     path: "",
@@ -40,13 +41,17 @@ export const router = createBrowserRouter([
         element: <AccountStatement />,
       },
       {
-        path: "/devices",
-        element: <Devices />,
+        path: "/settings",
+        element: <Settings />,
       },
-      // {
-      //   path: "/edit-trainer",
-      //   element: <EditTrainer />,
-      // },
+      {
+        path: "/edit-trainer",
+        element: <EditTrainerInfo />,
+      },
+      {
+        path: "/add-trainer",
+        element: <AddTrainer />,
+      },
     ],
   },
 ]);
