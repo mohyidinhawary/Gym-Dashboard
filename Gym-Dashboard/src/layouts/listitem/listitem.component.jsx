@@ -11,6 +11,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { Logout, SportsGymnasticsTwoTone } from "@mui/icons-material";
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from "react-router-dom";
 
 export function MainListItems() {
@@ -29,25 +30,25 @@ export function MainListItems() {
         </ListItemIcon>
         <ListItemText primary="Trainers" />
       </ListItemButton>
-      <ListItemButton component={Link} to="/mail">
+      {/* <ListItemButton component={Link} to="/mail">
         <ListItemIcon>
           <ListItemIcon>
             <MailIcon />
           </ListItemIcon>
         </ListItemIcon>
         <ListItemText primary="Mail" />
-      </ListItemButton>
+      </ListItemButton> */}
       <ListItemButton component={Link} to="/account-statement">
         <ListItemIcon>
           <AccountCircle />
         </ListItemIcon>
         <ListItemText primary="Account Statement" />
       </ListItemButton>
-      <ListItemButton component={Link} to="/devices">
+      <ListItemButton component={Link} to="/settings">
         <ListItemIcon>
-          <SportsGymnasticsTwoTone />
+          <SettingsIcon />
         </ListItemIcon>
-        <ListItemText primary="Devices" />
+        <ListItemText primary="settings" />
       </ListItemButton>
       <ListItemButton component={Link} to="/">
         <ListItemIcon>

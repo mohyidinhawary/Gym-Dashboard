@@ -114,10 +114,14 @@ export default function SideBar() {
             <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
               <img src={logo} alt="" />
             </Avatar>
+           
+          </Typography>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 24 }}>
+         XPOWER
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
@@ -125,7 +129,7 @@ export default function SideBar() {
               <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
@@ -136,7 +140,7 @@ export default function SideBar() {
               </Badge>
             </IconButton>
 
-            <IconButton
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -144,16 +148,16 @@ export default function SideBar() {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
             <IconButton
               sx={{ ml: 1 }}
               color="inherit"
               onClick={toggleColorMode}
             >
               {theme.palette.mode === "dark" ? (
-                <NightlightIcon />
-              ) : (
                 <Brightness7Icon />
+              ) : (
+                <NightlightIcon />
               )}
             </IconButton>
           </Box>

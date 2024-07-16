@@ -1,10 +1,9 @@
-import Box from "@mui/material/Box";
-import SideBar from "../../layouts/sidebar/sidebar.component";
 import StickyFooter from "../../layouts/footer/footer.component";
-export function Devices() {
-  return (
-    <>
-      <Box sx={{ display: "flex" }}>
+
+export function TrainerProfile(){
+    return(
+        <>
+        <Box sx={{ display: "flex" }}>
         <SideBar />
         <Box
           sx={{
@@ -15,13 +14,14 @@ export function Devices() {
             flexGrow: 1,
             p: 8,
             height: "100vh",
-            overflow: "auto",
+            overflow: "hidden",
+            paddingTop: 10,
           }}
         >
-          <div>hello devices;</div>;
+            
         </Box>
-      </Box>
-      <StickyFooter />
-    </>
-  );
+        </Box>
+        <StickyFooter />
+        </>
+    )
 }
