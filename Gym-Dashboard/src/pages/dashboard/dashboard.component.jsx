@@ -7,6 +7,7 @@ import Deposite from "../../components/box/box.component";
 import Box from "@mui/material/Box";
 import SideBar from "../../layouts/sidebar/sidebar.component";
 import StickyFooter from "../../layouts/footer/footer.component";
+import { ExportsImportsTable } from "../../components/Exports-imports-table/exports-imports-table.component";
 export default function Dashboard() {
   return (
     <>
@@ -54,8 +55,14 @@ export default function Dashboard() {
                 >
                   <Deposite />
                 </Paper>
+               
               </Grid>
-              {/* Recent Orders */}
+
+              <Grid item xs={12}>
+              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                <ExportsImportsTable />
+                </Paper>
+            </Grid>
             </Grid>
           </Container>
         </Box>

@@ -6,13 +6,14 @@ import ListSubheader from "@mui/material/ListSubheader";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 
 import PeopleIcon from "@mui/icons-material/People";
-import MailIcon from "@mui/icons-material/Mail";
+
 
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import { Logout, SportsGymnasticsTwoTone } from "@mui/icons-material";
+import { Group, Logout } from "@mui/icons-material";
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from "react-router-dom";
+
 
 export function MainListItems() {
   return (
@@ -40,9 +41,9 @@ export function MainListItems() {
       </ListItemButton> */}
       <ListItemButton component={Link} to="/account-statement">
         <ListItemIcon>
-          <AccountCircle />
+          < Group />
         </ListItemIcon>
-        <ListItemText primary="Account Statement" />
+        <ListItemText primary="users managment" />
       </ListItemButton>
       <ListItemButton component={Link} to="/settings">
         <ListItemIcon>
