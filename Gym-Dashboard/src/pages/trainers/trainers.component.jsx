@@ -63,6 +63,12 @@ const columns = [
     width: 100,
   },
   {
+    field: "rate",
+    headerName: "rate",
+
+    width: 100,
+  },
+  {
     field: "actions",
     headerName: "actions",
     width: 100,
@@ -95,7 +101,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 2,
@@ -107,7 +114,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 3,
@@ -119,7 +127,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 4,
@@ -131,7 +140,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 5,
@@ -143,7 +153,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 6,
@@ -155,7 +166,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 7,
@@ -167,7 +179,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 8,
@@ -179,7 +192,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
   {
     id: 9,
@@ -191,7 +205,8 @@ const rows = [
     gender:"male",
     experince:"2 year",
     contract_type:"yearly",
-    salary:"100$"
+    salary:"100$",
+    rate:200
   },
 ];
 
