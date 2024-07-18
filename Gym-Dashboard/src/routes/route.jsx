@@ -1,8 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import SignInSide from "../pages/sign-in/sign-in.component";
-
-import { Mail } from "../pages/mail/mail.component";
 import Dashboard from "../pages/dashboard/dashboard.component";
 import App from "../App";
 import { Trainers } from "../pages/trainers/trainers.component";
@@ -20,10 +17,7 @@ export const router = createBrowserRouter([
         path: "/",
         element: <SignInSide />,
       },
-      // {
-      //   path: "/home",
-      //   element: <Home />,
-      // },
+      
       {
         path: "/dashboard",
         element: <Dashboard />,
@@ -32,10 +26,7 @@ export const router = createBrowserRouter([
         path: "/tariners",
         element: <Trainers />,
       },
-      {
-        path: "/mail",
-        element: <Mail />,
-      },
+      
       {
         path: "/account-statement",
         element: <AccountStatement />,

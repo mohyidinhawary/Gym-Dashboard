@@ -1,24 +1,13 @@
-import CssBaseline from "@mui/material/CssBaseline";
+import {
+  Box,
+  Typography,
+  Container,
+  Copyright
 
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+} from "./index"
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary">
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
-// TODO remove, this demo shouldn't need to reset the theme.
+
 
 export default function StickyFooter() {
   return (
@@ -28,7 +17,7 @@ export default function StickyFooter() {
         flexDirection: "column",
       }}
     >
-      <CssBaseline />
+      
 
       <Box
         component="footer"
@@ -43,10 +32,11 @@ export default function StickyFooter() {
         }}
       >
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
+         
           <Copyright />
+          <Typography variant="body1">
+           ALL RIGHTS RESERVED
+          </Typography>
         </Container>
       </Box>
     </Box>
