@@ -1,15 +1,11 @@
-import * as React from "react";
-import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
-import Title from "../title/title.component";
+import Title from "../../layouts/title/title.component";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
+
 
 export default function Deposite() {
   return (
-    <React.Fragment>
+    <>
       <Title>Recent Deposits</Title>
       <Typography component="p" variant="h4">
         $3,024.00
@@ -18,10 +14,8 @@ export default function Deposite() {
         on 15 March, 2019
       </Typography>
       <div>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          View balance
-        </Link>
+        
       </div>
-    </React.Fragment>
+    </>
   );
 }

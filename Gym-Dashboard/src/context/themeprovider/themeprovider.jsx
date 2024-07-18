@@ -7,7 +7,7 @@ const ThemeContext = createContext({
   theme: createTheme(),
 });
 
-export const ThemeContextProvider = ({ children }) => {
+export  const ThemeContextProvider = ({ children }) => {
   const useColorTheme = () => {
     const [mode, setMode] = useState("light");
     const theme = createTheme({

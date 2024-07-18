@@ -1,29 +1,21 @@
-import Box from "@mui/material/Box";
-import SideBar from "../../layouts/sidebar/sidebar.component";
-import StickyFooter from "../../layouts/footer/footer.component";
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-
-
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import { Divider } from "@mui/material";
-import FormGroup from '@mui/material/FormGroup';
-
-import Switch from '@mui/material/Switch';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import FormControl from '@mui/material/FormControl';
+import {
+  Box ,
+SideBar,
+StickyFooter,
+Avatar,
+Button,
+CssBaseline,
+TextField,
+FormControlLabel,
+Grid,
+Typography,
+FormGroup,
+Switch,
+InputLabel,
+MenuItem, 
+Select,
+FormControl
+} from "./index"
 import { useState } from "react";
 
 

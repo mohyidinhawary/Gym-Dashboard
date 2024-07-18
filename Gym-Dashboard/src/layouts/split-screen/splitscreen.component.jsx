@@ -1,6 +1,7 @@
-import StickyFooter from "../../layouts/footer/footer.component";
-
-export function TrainerProfile(){
+import { Box } from "@mui/material"
+import SideBar from "../../layouts/sidebar/sidebar.component"
+import StickyFooter from "../../layouts/footer/footer.component"
+export default function SplitScreen({children}){
     return(
         <>
         <Box sx={{ display: "flex" }}>
@@ -18,7 +19,7 @@ export function TrainerProfile(){
             paddingTop: 10,
           }}
         >
-            
+{children}
         </Box>
         </Box>
         <StickyFooter />

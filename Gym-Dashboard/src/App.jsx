@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-
+import { ErrorBoundary } from "./pages/errorboundary/errorboundary.component";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeContextProvider } from "./context/themeprovider/themeprovider";
 
@@ -8,8 +8,10 @@ function App() {
     <>
       <ThemeContextProvider>
         <CssBaseline />
-
-        <Outlet />
+<ErrorBoundary>
+<Outlet />
+</ErrorBoundary>
+       
       </ThemeContextProvider>
     </>
   );
