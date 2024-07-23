@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging,getToken } from "firebase/messaging";
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyApyeOA877oKoV1zlB5NOmAigW3qbQn6pU",
     authDomain: "xpower-gym.firebaseapp.com",
@@ -14,11 +13,7 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
- export const messaging=getMessaging(app);
-
- 
-  export const requestpermission=async()=>{
-    try{
+  const messaging=getMessaging(app);
   getToken(messaging,{vapidKey:'BFd2sxa43ITeYGhCRWAUAAsnwyHIyGImgI1AXBbBvvdi97StAioTGesfX4MXXWzsUFMUOYtpygrDe4emaimOSb8'}).then((currentToken)=>{
     if(currentToken){
         console.log('currentToken',currentToken);
@@ -27,14 +22,3 @@ const firebaseConfig = {
         console.log('can not get token');
     }
   })
-}
-catch(err){
-console.log(err);
-}
-  }
-export default requestpermission
-
-//  export const db = getFirestore(app);
-
-
-  
