@@ -1,7 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging,getToken } from "firebase/messaging";
+import {
+  getFirestore,
+ collection
 
-
+ 
+  
+} from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyApyeOA877oKoV1zlB5NOmAigW3qbQn6pU",
     authDomain: "xpower-gym.firebaseapp.com",
@@ -13,6 +18,12 @@ const firebaseConfig = {
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+
+ export const db=getFirestore(app);
+
+ 
+
+ 
 
  export const messaging=getMessaging(app);
 

@@ -54,7 +54,7 @@ export default function SignInSide() {
               <img src={logo} alt="" />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+             {t("sign in")}
             </Typography>
             <Box component="form" noValidate sx={{ mt: 1 }}>
               <TextField
