@@ -13,13 +13,13 @@ import {
   
 } from './index';
 import { Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 
 
 
 
 export default function SignInSide() {
-  
+  const {t,i18n}=useTranslation();
   return (
    
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -54,7 +54,7 @@ export default function SignInSide() {
               <img src={logo} alt="" />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+             {t("sign in")}
             </Typography>
             <Box component="form" noValidate sx={{ mt: 1 }}>
               <TextField
@@ -88,7 +88,7 @@ export default function SignInSide() {
                  component={Link} to="/dashboard"
                 
               >
-                Sign In
+                {t("signin")}
               </Button>
               <Grid container>
                 <Grid item xs></Grid>

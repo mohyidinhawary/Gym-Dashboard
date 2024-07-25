@@ -6,10 +6,10 @@ import {
   Typography,
   Divider,
   IconButton,
-  Badge,
+ 
   MenuIcon,
   ChevronLeftIcon,
-  NotificationsIcon,
+ 
   logo,
   Avatar,
   MoreIcon,
@@ -21,6 +21,7 @@ import {
 import { useState } from "react";
 import { useThemeContext } from "../../context/themeprovider/themeprovider";
 import { AppBar,Drawer } from "./sidebar.style";
+import MenuPopupState from "../../components/notifications-list/notifications-list.component";
 
 
 
@@ -73,16 +74,9 @@ export default function SideBar() {
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+
+              <MenuPopupState />
+     
             <IconButton
               sx={{ ml: 1 }}
               color="inherit"
