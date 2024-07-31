@@ -1,5 +1,5 @@
 import { IconButton } from "@mui/material";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import UesrAccountStatment from "../components/account-statment/user-account-statment.component";
 export const columns = [
     { field: "id", headerName: "ID", width: 70 },
     { field: "firstName", headerName: "First name", width: 340 },
@@ -13,7 +13,7 @@ export const columns = [
        
   <>
             <IconButton onClick={() => handleviewClick(params.row.id)}>
-             <RemoveRedEyeIcon />
+             <UesrAccountStatment />
            </IconButton> 
   
          
