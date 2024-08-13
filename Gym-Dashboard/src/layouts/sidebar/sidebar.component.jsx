@@ -26,7 +26,7 @@ import MenuPopupState from "../../components/notifications-list/notifications-li
 
 
 export default function SideBar() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -101,7 +101,7 @@ export default function SideBar() {
           </Box>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open} style={{ height: "100vh" }}>
+      <Drawer variant="permanent" open={open} >
         <Toolbar
           sx={{
             display: "flex",

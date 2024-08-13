@@ -22,7 +22,7 @@ export function Trainers() {
   defaultValue=""
   variant="outlined"
   size="small"
-  style={{marginLeft:"850px"}}
+  
  margin="dense"
  label="serach"
 />

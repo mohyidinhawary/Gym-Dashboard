@@ -1,3 +1,4 @@
+import { SplitScreen } from "../dashboard";
 import {
   Box ,
 SideBar,
@@ -27,29 +28,16 @@ export function Settings() {
   };
   return (
     <>
-      <Box sx={{ display: "flex" }}>
-        <SideBar />
-        <Box
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
-            flexGrow: 1,
-            p: 8,
-           
-            overflow: "auto",
-          }}
-        >
-          
+      <SplitScreen>
          
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+          
             display: 'flex',
             flexDirection: 'column',
             alignItems: "",
+          
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -58,10 +46,10 @@ export function Settings() {
           <Typography component="h1" variant="h5">
          Mohyidin Hawary
           </Typography>
-          <Typography component="h1" variant="h5" sx={{marginTop:"15px"}}>
+          <Typography component="h1" variant="h5" >
        personal info
           </Typography>
-          <Box component="form" noValidate  sx={{ mt: 3 }}>
+          <Box component="form" noValidate  sx={{ mt: 1 }}>
          
             <Grid container spacing={2}>
               <Grid item xs={12} >
@@ -96,8 +84,8 @@ export function Settings() {
                 />
               </Grid>
               
-              <Typography component="h1" variant="h5" sx={{marginTop:"15px"}}>
-    change   password
+              <Typography component="h1" variant="h5" >
+    change password
           </Typography>
          
               <Grid item xs={12}>
@@ -122,34 +110,19 @@ export function Settings() {
                   autoComplete="new-password"
                 />
                 </Grid>
-                <Typography component="h1" variant="h5" sx={{marginTop:"15px"}}>
+                <Typography component="h1" variant="h5" >
     other settings
           </Typography>
 
                 <Grid item xs={12}>
                 <FormGroup>
       <FormControlLabel control={<Switch defaultChecked />} label="notification" />
-      <FormControlLabel required control={<Switch />} label="light" />
+     
       
     </FormGroup>
                 </Grid>
 
-                <Grid item xs={12}>
-                <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">language</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={language}
-          label="language"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>arabic</MenuItem>
-          <MenuItem value={20}>english</MenuItem>
-          <MenuItem value={30}>french</MenuItem>
-        </Select>
-      </FormControl>
-                </Grid>
+               
               </Grid>
               
             
@@ -167,9 +140,9 @@ export function Settings() {
       
   
       
-        </Box>
-      </Box>
-      <StickyFooter />
+      
+        </SplitScreen>
+          
     </>
   );
 }
