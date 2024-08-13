@@ -12,7 +12,7 @@ export function AccountStatement() {
     <>
       
           <SplitScreen>
-          <AddNotification />
+          <AddNotification  />
           
 
           <TextField
@@ -21,7 +21,7 @@ export function AccountStatement() {
   defaultValue=""
   variant="outlined"
   size="small"
-  style={{marginLeft:"850px"}}
+  
  margin="dense"
  label="serach"
 />

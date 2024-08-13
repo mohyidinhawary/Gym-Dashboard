@@ -1,9 +1,11 @@
 import { LineChart, axisClasses } from "@mui/x-charts";
 import Title from "../../layouts/title/title.component";
 import { data } from "../../constants/chartinfo"
+
 export default function Chart() {
   return (
     <>
+    
       <Title>Today</Title>
       <div style={{ width: "100%", flexGrow: 1, overflow: "hidden" }}>
         <LineChart
@@ -54,6 +56,7 @@ export default function Chart() {
           }}
         />
       </div>
+     
     </>
   );
 }

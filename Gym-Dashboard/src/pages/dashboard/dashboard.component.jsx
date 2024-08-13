@@ -7,14 +7,15 @@ Chart ,
 Deposite,
  ExportsImportsTable, 
  SplitScreen
-} from "./index"
+} from "./index";
+
 export default function Dashboard() {
   return (
     <>
       <SplitScreen>
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} >
             
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
@@ -25,7 +26,10 @@ export default function Dashboard() {
                     height: 240,
                   }}
                 >
+                 
                   <Chart />
+                 
+                
                 </Paper>
               </Grid>
             

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, Container } from "@mui/material"
 import SideBar from "../../layouts/sidebar/sidebar.component"
 import StickyFooter from "../../layouts/footer/footer.component"
 export default function SplitScreen({children}){
@@ -13,13 +13,16 @@ export default function SplitScreen({children}){
                 ? theme.palette.grey[100]
                 : theme.palette.grey[900],
             flexGrow: 1,
-            p: 8,
+          
             height: "100vh",
-            overflow: "hidden",
-            paddingTop: 10,
+            overflow: "auto",
+          
           }}
         >
-{children}
+          <Container sx={{paddingTop:8}}>
+          {children}
+          </Container>
+
         </Box>
         </Box>
         <StickyFooter />

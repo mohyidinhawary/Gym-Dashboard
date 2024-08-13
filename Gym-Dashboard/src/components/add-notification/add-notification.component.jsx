@@ -52,7 +52,7 @@ export default function AddNotification() {
 
 
   return (
-    <div>
+    <>
       <IconButton onClick={handleOpen}>
       <NotificationAddIcon />
       </IconButton>
@@ -103,6 +103,6 @@ export default function AddNotification() {
               </Box>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }
